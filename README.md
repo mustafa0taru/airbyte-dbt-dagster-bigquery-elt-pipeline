@@ -1,1 +1,1 @@
-# duckdb-dbt-airflow-elt-pipeline
+# airflow-dbt-bigquery-elt-pipeline
