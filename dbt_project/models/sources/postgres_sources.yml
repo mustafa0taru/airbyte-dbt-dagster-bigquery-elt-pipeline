@@ -50,8 +50,8 @@ sources:
           - name: _airbyte_normalized_at
           - name: _airbyte_users_hashid
 
-      - name: purchases
-        description: "Simulated purchase data from the postgres connector."
+      - name: orders
+        description: "Simulated orders data from the postgres connector."
         columns:
           - name: id
             description: "Unique identifier for the purchase."
@@ -67,3 +67,33 @@ sources:
           - name: _airbyte_normalized_at
           - name: _airbyte_users_hashid
 
+      - name: reviews
+        description: "Simulated review data from the postgres connector."
+        columns:
+          - name: id
+            description: "Unique identifier for the review."
+            type: INTEGER
+          - name: rating
+            description: "Star rating given by the user."
+            type: INTEGER
+          - name: description
+            description: "Textual review of the product."
+            type: TEXT
+          - name: product_id
+            description: "Foreign key referencing the product being reviewed."
+            type: INTEGER
+          - name: customer_id
+            description: "Foreign key referencing the customer who wrote the review."
+            type: INTEGER
+          - name: created_at
+            description: "Timestamp when the review was created."
+            type: TIMESTAMP
+          - name: _airbyte_ab_id
+            description: "Unique identifier for the raw record in Airbyte."
+            type: STRING
+          - name: _airbyte_emitted_at
+            description: "Timestamp when the record was emitted from the source."
+            type: TIMESTAMP
+          - name: _airbyte_normalized_at
+            description: "Timestamp when the record was normalized in Airbyte."
+            type: TIMESTAMP
