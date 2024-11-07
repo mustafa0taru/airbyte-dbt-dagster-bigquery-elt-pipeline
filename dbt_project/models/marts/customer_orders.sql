@@ -14,7 +14,7 @@ SELECT
   c.name,
   c.email,
   c.address,
-  co.total_orders
+  co.total_orders,
   co.total_spend
 FROM {{ ref('stg_customers') }} c
 LEFT JOIN customer_orders co ON c.customer_id = co.customer_id

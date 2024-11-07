@@ -19,9 +19,9 @@ GROUP BY product_id
 )
 
 SELECT
-  s.product_id
-  s.total_units_sold
-  s.total_sales
+  s.product_id,
+  s.total_units_sold,
+  s.total_sales,
   r.average_rating
 FROM sales_data s
 LEFT JOIN rewiews_data r ON s.product_id = r.product_id
